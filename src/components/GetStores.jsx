@@ -1,7 +1,7 @@
 export const GetStores = ({ stores, loading }) => {
   return (
     <div>
-      <h2>Stores</h2>
+      <h2 className="text-xl font-semibold mb-4">Stores</h2>
       {loading && <p>Loading...</p>}
       <ul>
         {stores.map((store) => (
