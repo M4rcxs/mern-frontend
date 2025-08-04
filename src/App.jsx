@@ -1,35 +1,34 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { CreateStore } from './components/CreateStore.jsx'
+import { fetchStores } from './services/fetchStores.js'
+import { GetStores } from './components/GetStores.jsx'
 
 
 function App() {
-  const [stores, setStores] = useState([])
-  useEffect(() => {
-    const fetchStores = async () => {
-      try {
-        const response = await fetch('https://mern-backend-snowy-pi.vercel.app/stores')
-        const data = await response.json()
-        setStores(data)
-      } catch (error) {
-        console.error('Error fetching stores:', error)
-      }
-    }
+  const [stores, setStores] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    fetchStores()
-  }, [])
+  const fetchStores = async () => {
+    try {
+      const response = await fetch("https://mern-backend-snowy-pi.vercel.app/stores");
+      const data = await response.json();
+      setStores(data);
+    } catch (err) {
+      console.error("Erro ao buscar lojas:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchStores();
+  }, []);
 
   return (
     <div className="App">
-      <h2>Stores</h2>
-      <ul>
-        {stores.map((store) => (
-          <li key={store._id}>
-            <h3>{store.name}</h3>
-            <p>{store.description}</p>
-            <p>Location: {store.location}</p>
-          </li>
-        ))}
-      </ul>
+      <GetStores onFetchStores={fetchStores} stores={stores} loading={loading} />
+      <CreateStore onStoreCreated={fetchStores} />
     </div>
   )
 }
