@@ -43,7 +43,7 @@ const MapComponent = () => {
 
             while (!found && radius <= maxRadius) {
                 const res = await axios.get(
-                    `http://localhost:3000/stations-nearby?lat=${lat}&lon=${lon}&radius=${radius}`
+                    `https://mern-backend-snowy-pi.vercel.app/stations-nearby?lat=${lat}&lon=${lon}&radius=${radius}`
                 );
 
                 if (res.data.nearby.length > 0) {
@@ -60,6 +60,7 @@ const MapComponent = () => {
             console.error("Erro ao buscar estações:", err);
         }
     };
+
 
     // pega localização do usuário
     useEffect(() => {
@@ -115,19 +116,19 @@ const MapComponent = () => {
                 {/* Busca por bairro */}
                 <div className="p-2 gap-2 flex">
 
-                <input
-                    type="text"
-                    placeholder="Digite o nome do bairro"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="flex-1 p-3 rounded-lg border border-gray-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition placeholder-gray-400"
-                />
-                <button
-                    onClick={handleSearch}
-                    className="bg-blue-500 text-white px-5 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-200 font-semibold"
-                >
-                    Buscar
-                </button>
+                    <input
+                        type="text"
+                        placeholder="Digite o nome do bairro"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="flex-1 p-3 rounded-lg border border-gray-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition placeholder-gray-400"
+                    />
+                    <button
+                        onClick={handleSearch}
+                        className="bg-blue-500 text-white px-5 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-200 font-semibold"
+                    >
+                        Buscar
+                    </button>
                 </div>
                 {/* Estatísticas */}
                 <div className="w-full md:w-1/3 p-4 border rounded-xl shadow-lg bg-white/90">
