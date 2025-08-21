@@ -111,7 +111,11 @@ const MapComponent = () => {
         <div className="flex flex-col" style={{ height: "100vh", width: "100%", position: "relative", fontFamily: "Arial, sans-serif" }}>
 
             {/* Container flex principal */}
+                <h1 className="flex justify-center items-center font-semibold text-xl">
+                    OndeTemBike? 🚲
+                </h1>
             <div className="flex flex-col md:flex-row justify-center items-start mt-6 w-full gap-6 px-4">
+
 
                 {/* Busca por bairro */}
                 <div className="p-2 gap-2 flex">
