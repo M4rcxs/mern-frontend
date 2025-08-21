@@ -144,7 +144,7 @@ const MapComponent = () => {
             </div>
 
 
-            <MapContainer className="mt-[100px]" center={userPosition} zoom={15} style={{ height: "50%", width: "100%" }}>
+            <MapContainer className="mt-[40px]" center={userPosition} zoom={15} style={{ height: "50%", width: "100%" }}>
                 <TileLayer
                     url={`https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=ovDGV2dDP2oKlv9JNrII`}
                 />
