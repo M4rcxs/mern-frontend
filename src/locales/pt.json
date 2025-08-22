@@ -12,5 +12,8 @@
   "searchButton": "Buscar",
   "stations": "Estações",
   "bikes": "Bicicletas",
-  "docks": "Vagas"
+  "docks": "Vagas",
+  "bikesAvailable": "Bicicletas disponíveis",
+  "docksAvailable": "Vagas disponíveis",
+  "distance": "Distância"
 }

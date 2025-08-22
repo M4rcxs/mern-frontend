@@ -109,11 +109,11 @@ const MapComponent = () => {
                                 <Popup>
                                     <strong>{station.name}</strong>
                                     <br />
-                                    Bikes disponíveis: {station.bikes_available}
+                                    {t("bikesAvailable")}: {station.bikes_available}
                                     <br />
-                                    Vagas disponíveis: {station.docks_available}
+                                    {t("docksAvailable")}: {station.docks_available}
                                     <br />
-                                    Distância: {Math.round(station.distance)} m
+                                    {t("distance")}: {Math.round(station.distance)} m
                                 </Popup>
                             </Marker>
                         ))}

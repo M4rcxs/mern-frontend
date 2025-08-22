@@ -10,5 +10,8 @@
   "youAreHere": "You are here",
   "statistics": "Statistics",
   "stations": "Stations",
-  "searchButton": "Search"
+  "searchButton": "Search",
+  "bikesAvailable": "Bikes available",
+  "docksAvailable": "Docks available",
+  "distance": "Distance"
 }
