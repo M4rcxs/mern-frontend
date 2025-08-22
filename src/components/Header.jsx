@@ -6,13 +6,16 @@ import ukflag from "../flags/uk.png";
 
 export const Header = ({ stations, setUserPosition, fetchStations }) => {
     const [search, setSearch] = useState("");
-    const { t, i18n } = useTranslation(); // pegar t e i18n
+    const { t, i18n } = useTranslation(); 
 
     const handleSearch = async () => {
         if (!search) return;
+
         try {
+            const query = `${search}, RJ`;
+
             const res = await axios.get(
-                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(search)}`
+                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`
             );
 
             if (res.data && res.data.length > 0) {
@@ -21,7 +24,7 @@ export const Header = ({ stations, setUserPosition, fetchStations }) => {
                 setUserPosition(coords);
                 fetchStations(coords[0], coords[1]);
             } else {
-                alert(t("neighborhoodNotFound")); // tradução
+                alert(t("neighborhoodNotFound"));
             }
         } catch (err) {
             console.error("Erro na busca por bairro:", err);
