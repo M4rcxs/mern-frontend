@@ -1,0 +1,14 @@
+{
+  "appTitle": "RJ WhereHasBike? 🚲",
+  "searchPlaceholder": "Enter neighborhood name",
+  "totalStations": "Total stations",
+  "availableBikes": "Bikes available",
+  "availableDocks": "Docks available",
+  "topStations": "Top 5 stations with most bikes",
+  "viewStats": "View Statistics 📊",
+  "closeStats": "Close Statistics",
+  "youAreHere": "You are here",
+  "statistics": "Statistics",
+  "stations": "Stations",
+  "searchButton": "Search"
+}
