@@ -1,12 +1,43 @@
-# React + Vite
+# Frontend - Integração de APIs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend do projeto de integração de múltiplas APIs, desenvolvido com **React**, **Vite** e **TailwindCSS**, responsável por fornecer uma interface interativa e responsiva para o usuário.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- **React** – Biblioteca principal para construção da interface.  
+- **Vite** – Ferramenta de build rápida e moderna para desenvolvimento.  
+- **TailwindCSS** – Framework de estilização utilitária para um design consistente e responsivo.  
+- **Axios** – Para requisições HTTP ao backend e APIs externas.  
+- **React-Leaflet** e **MapLibre-GL** – Para renderização de mapas interativos.  
+- **i18next** e **react-i18next** – Suporte a múltiplos idiomas.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Funcionalidades principais
+
+- Interface responsiva e intuitiva para visualização de dados provenientes do backend.  
+- Exibição de mapas dinâmicos com informações de localização em tempo real.  
+- Suporte a múltiplos idiomas via **i18next**.  
+- Comunicação eficiente com o backend utilizando **Axios** para consumir APIs.  
+
+---
+## How to Run
+
+Siga os passos abaixo para rodar o frontend localmente:
+
+### 1. Clone o repositório
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd <NOME_DO_REPOSITORIO>
+```
+2. Instale as dependências e configure uma chave no LEAFTLET.
+```
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento
+```
+npm run dev
+```
